@@ -1,0 +1,15 @@
+{
+  "todo": {
+    "maxLength": 200,
+    "limit": 50,
+    "sortOptions": [
+      {
+        "priority": "Desc Priority",
+        "-priority": "Asc Priority",
+        "id": "Desc Updated",
+        "-id": "Asc Updated"
+      }
+    ]
+  },
+  "db": {}
+}

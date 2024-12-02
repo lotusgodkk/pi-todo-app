@@ -1,0 +1,36 @@
+{
+  "app": "Todo App",
+  "title": "Todo List",
+  "todoList": {
+    "addTodo": "Add Todo",
+    "todoDescription": "Describe Todo",
+    "clearTodos": "Clear All",
+    "delete": "Delete",
+    "edit": "Edit",
+    "editPriority": "Edit Priority",
+    "placeholder": "Add a new todo",
+    "toggleTodoModal": "Toggle Modal",
+    "loadNextPage": "Next",
+    "loadPreviousPage": "Previous",
+    "saveEdit": "Save",
+    "cancelEdit": "Cancel",
+    "clearAll": "Clear All",
+    "priorities": {
+      "critical": "Critical",
+      "moderate": "Moderate",
+      "optional": "Optional"
+    }
+  },
+  "userManagement": {
+    "enterUsername": "Enter username",
+    "logout": "Logout",
+    "language": "Language"
+  },
+  "themeToggle": {
+    "lightMode": "Light Mode",
+    "darkMode": "Dark Mode",
+    "labelDark": "Switch to Dark Mode",
+    "labelLight": "Switch to Light Mode"
+  },
+  "error": {}
+}

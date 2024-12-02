@@ -1,0 +1,36 @@
+{
+  "app": "Aplicación de Tareas",
+  "title": "Lista de Tareas",
+  "todoList": {
+    "addTodo": "Agregar Tarea",
+    "todoDescription": "Describir la Tarea",
+    "clearTodos": "Limpiar Todo",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "editPriority": "Editar Prioridad",
+    "placeholder": "Agregar una nueva tarea",
+    "toggleTodoModal": "Alternar Modal",
+    "loadNextPage": "Siguiente",
+    "loadPreviousPage": "Anterior",
+    "saveEdit": "Guardar",
+    "cancelEdit": "Cancelar",
+    "clearAll": "Limpiar Todo",
+    "priorities": {
+      "critical": "Crítico",
+      "moderate": "Moderado",
+      "optional": "Opcional"
+    }
+  },
+  "userManagement": {
+    "enterUsername": "Introduzca nombre de usuario",
+    "logout": "Cerrar sesión",
+    "language": "Idioma"
+  },
+  "themeToggle": {
+    "lightMode": "Modo Claro",
+    "darkMode": "Modo Oscuro",
+    "labelDark": "Cambiar a Modo Oscuro",
+    "labelLight": "Cambiar a Modo Claro"
+  },
+  "error": {}
+}

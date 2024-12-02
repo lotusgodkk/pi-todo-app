@@ -1,0 +1,216 @@
+@import url(https://fonts.bunny.net/css?family=lato:400|quicksand:500,700);
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+:root {
+    --default-bg-color: #FFFFFF;
+    --text-color: #1f1f1f;
+    --link-color: #1a0dab;
+    --primary-color: #0b57d0;
+    --secondary-bg-color: #f2f2f2;
+    --tertiary-bg-color: #9aa0a6;
+    --border-color: #dfe1e5;
+    --secondary-border-color: #dadce0;
+    --secondary-text-color: #FFFFFF;
+    --container-bg-color: #F7F8FC;
+    --gray: #e0e2e480;
+    --light-gray: #cdd1d4;
+    --moderate: #9eecb1;
+    --critical: #e19292;
+    --optional: #7ccaeb;
+    --constant-text-color: #062e6f;
+}
+
+//The below is for auto switching of the theme but currently disabled.
+@media (prefers-color-scheme: dasrk) {
+
+    :root {
+        --default-bg-color: #202124;
+        --text-color: #E8E8E8;
+        --link-color: #99c3ff;
+        --primary-color: #a8c7fa;
+        --secondary-text-color: #062e6f;
+        --secondary-bg-color: #171717;
+        --secondary-border-color: #3c4043;
+        --container-bg-color: #292A2D;
+        --tertiary-bg-color: transparent;
+        --border-color: transparent;
+        --gray: #e0e2e480;
+        --light-gray: #cdd1d4;
+        --constant-text-color: #062e6f;
+    }
+}
+
+// Body styles for dark and light themes
+body,
+html {
+    font-family: "Lato", sans-serif;
+    background-color: var(--default-bg-color);
+    color: var(--text-color);
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg, var(--gray) 0%, var(--light-gray) 100%);
+
+    body.dark {
+        --default-bg-color: #202124;
+        --text-color: #E8E8E8;
+        --link-color: #99c3ff;
+        --primary-color: #a8c7fa;
+        --secondary-text-color: #062e6f;
+        --secondary-bg-color: #171717;
+        --secondary-border-color: #3c4043;
+        --container-bg-color: #292A2D;
+        --tertiary-bg-color: transparent;
+        --border-color: transparent;
+        --gray: #e0e2e480;
+        --light-gray: #cdd1d4;
+        --constant-text-color: #062e6f;
+    }
+
+    @media (max-width:700px) {
+        font-size: 12px;
+
+    }
+
+    h1 {
+        font-weight: 600;
+        font-size: 3rem;
+        margin-bottom: 3rem;
+
+    }
+
+    *:focus {
+        outline-offset: 0.2rem;
+        outline-color: var(--primary-color);
+        box-shadow: 0 0 0.2rem 0.2rem var(--primary-color);
+    }
+
+    select {
+        background: var(--container-bg-color);
+        border: 1px solid var(--default-border-color);
+        padding: 0.5rem 1rem;
+        box-shadow: none;
+        border-radius: 0.3rem;
+        color: var(--text-color)
+    }
+
+    label {
+        font-size: inherit;
+        font-weight: 300;
+        margin-bottom: 0.3rem;
+        display: block;
+    }
+
+    input {
+        display: block;
+        padding: 0.5rem 1rem;
+        border-radius: 0.3rem;
+        background-color: var(--secondary-bg-color);
+        border: 1px solid var(--border-color);
+        width: 100%;
+        box-sizing: border-box;
+        font-size: inherit;
+        margin-bottom: 1rem;
+    }
+
+    textarea {
+        resize: none;
+        height: 7rem;
+        background-color: var(--secondary-bg-color);
+        border: 1px solid var(--border-color);
+        color: inherit;
+        font: inherit;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1rem;
+    }
+
+    fieldset {
+        border: none;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    button {
+        margin: 1rem 0;
+        border-radius: 0.3rem;
+        padding: 0.5rem 1rem;
+        box-shadow: none;
+        border: none;
+        cursor: pointer;
+
+        &.primary {
+            background-color: var(--primary-color);
+            color: var(--secondary-text-color);
+        }
+
+        &.danger {
+            background-color: lightcoral;
+        }
+
+    }
+
+    .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        background-color: var(--secondary-bg-color);
+        color: var(--text-color);
+        margin: 0;
+
+        section {
+            width: 100%;
+            max-width: 400px;
+            max-height: 70vh;
+            overflow: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: var(--default-bg-color);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+            padding: 2rem;
+        }
+
+        main {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            overflow: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: var(--default-bg-color);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+            padding: 2rem;
+            align-self: flex-start;
+            margin-top: 9rem;
+        }
+
+        &.card-todo {
+            min-height: 100%;
+            margin-top: 7rem;
+        }
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .text-error {
+        color: red
+    }
+
+    .flex {
+        display: flex;
+        gap: 1rem;
+        align-items: baseline;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
