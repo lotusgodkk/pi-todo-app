@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 import { signup } from "@/utils/indexedDbUtils";
 
 export default {
@@ -50,6 +50,12 @@ export default {
       error: null,
     };
   },
+  computed: {
+    ...mapGetters(["getCurrentUser"]),
+    currentUser() {
+      return this.getCurrentUser;
+    },
+  },
   methods: {
     ...mapActions(["signup"]),
     async signup() {
@@ -58,9 +64,8 @@ export default {
           this.error = "Username and password are required!";
           return;
         }
-        //await this.signup({ username: this.username, password: this.password });
         await signup({ username: this.username, password: this.password });
-        const user = { username: this.username, password: this.password }; // Example, use proper user details
+        let user = { username: this.username, password: this.password }; // Example, use proper user details
         this.$store.commit("setCurrentUser", user);
 
         this.$router.push("/todo");
@@ -68,6 +73,11 @@ export default {
         this.error = error.message;
       }
     },
+  },
+  created() {
+    if (this.currentUser?.username) {
+      this.$router.push("/todo");
+    }
   },
 };
 </script>

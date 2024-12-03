@@ -1,6 +1,6 @@
 <template>
   <div class="todo-item">
-    <div v-if="!isEditing" class="flex">
+    <div class="flex">
       <span>
         {{ todo.text }}
         <small :class="['badge', todo.priority]">{{
@@ -46,6 +46,7 @@ export default {
     padding: 0.2rem 0.3rem;
     border-radius: 0.2rem;
     text-transform: uppercase;
+    font-size: 0.7rem;
     color: var(--constant-text-color);
   }
   .badge.moderate {
