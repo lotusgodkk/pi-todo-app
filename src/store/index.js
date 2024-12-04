@@ -19,7 +19,7 @@ export default createStore({
       localStorage.setItem("theme", theme);
     },
     setCurrentUser(state, user) {
-      state.currentUser = user;
+      state.currentUser = { username: user.username };
       sessionStorage.setItem("currentUser", JSON.stringify(user));
     },
     logout(state) {

@@ -172,6 +172,7 @@ export default {
     },
     async removeTodo(id) {
       try {
+        if (!confirm("Are you sure. This cannot be undone?")) return false;
         await deleteTodo(id);
       } catch (e) {
         //console.error(e);
@@ -212,6 +213,7 @@ export default {
           console.warn("No active user found!");
           return;
         }
+        if (!confirm("Are you sure. This cannot be undone?")) return false;
 
         await clearAllTodos(this.getCurrentUser.username);
         this.todos = [];
