@@ -58,5 +58,8 @@ export default {
   .badge.optional {
     background: var(--optional);
   }
+  .badge.urgent {
+    background: var(--urgent);
+  }
 }
 </style>

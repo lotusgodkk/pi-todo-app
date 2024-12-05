@@ -27,6 +27,9 @@
             <option value="optional">
               {{ $t("todoList.priorities.optional") }}
             </option>
+            <option value="urgent">
+              {{ $t("todoList.priorities.urgent") }}
+            </option>
           </select>
           <div class="flex">
             <button
@@ -70,6 +73,9 @@
               </option>
               <option value="optional">
                 {{ $t("todoList.priorities.optional") }}
+              </option>
+              <option value="urgent">
+                {{ $t("todoList.priorities.urgent") }}
               </option>
             </select>
             <button class="primary" type="submit">
@@ -174,6 +180,7 @@ export default {
       try {
         if (!confirm("Are you sure. This cannot be undone?")) return false;
         await deleteTodo(id);
+        this.cancelEdit();
       } catch (e) {
         //console.error(e);
       }
@@ -190,7 +197,7 @@ export default {
         );
         this.todos = todos || [];
         if (this.todos.length) {
-          const priorities = ["critical", "moderate", "optional"];
+          const priorities = ["critical", "moderate", "optional", "urgent"];
           const order = this.sortOrder.replace("-", "");
           const sorted = this.todos.slice().sort((a, b) => {
             return order === "priority"
