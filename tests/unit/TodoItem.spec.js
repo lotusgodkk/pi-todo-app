@@ -34,6 +34,5 @@ describe("TodoItem.vue", () => {
   it("finds button element and checks if it exists", () => {
     const button = wrapper.find("button");
     expect(button.exists()).toBe(true);
-    console.log(button.html());
   });
 });

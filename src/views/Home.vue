@@ -23,7 +23,6 @@ export default {
     },
   },
   created() {
-    console.log(this.currentUser);
     if (!this.currentUser) {
       this.$router.push("/");
     }

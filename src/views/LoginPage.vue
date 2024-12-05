@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import { mapActions, mapMutations } from "vuex";
+import { mapActions, mapMutations, mapGetters } from "vuex";
 import { validateUser } from "@/utils/indexedDbUtils";
 
 export default {
@@ -50,6 +50,12 @@ export default {
       error: null,
     };
   },
+  computed: {
+    ...mapGetters(["getCurrentUser"]),
+    currentUser() {
+      return this.getCurrentUser;
+    },
+  },
   methods: {
     ...mapActions(["login"]),
     ...mapMutations(["setCurrentUser"]),
@@ -57,11 +63,9 @@ export default {
       try {
         // Validate user credentials
         const user = await validateUser(this.username, this.password);
-        console.log(user);
 
         // If valid, store user session in sessionStorage
         this.setCurrentUser(user);
-        console.log("set");
 
         // Redirect to the Todo page
         this.$router.push("/todo");
@@ -69,6 +73,11 @@ export default {
         this.error = error.message;
       }
     },
+  },
+  created() {
+    if (this.currentUser?.username) {
+      this.$router.push("/todo");
+    }
   },
 };
 </script>

@@ -18,7 +18,8 @@
     "priorities": {
       "critical": "Critical",
       "moderate": "Moderate",
-      "optional": "Optional"
+      "optional": "Optional",
+      "urgent": "Urgent"
     }
   },
   "userManagement": {

@@ -1,6 +1,6 @@
 import config from "@/lookup/config.json";
 
-const DB_NAME = "todoApp";
+const DB_NAME = config.db.name;
 const DB_VERSION = 1;
 const USERS_STORE = "users";
 const TODOS_STORE = "todos";
@@ -161,7 +161,6 @@ async function deleteTodo(todoId) {
 
     return new Promise((resolve, reject) => {
       request.onsuccess = () => {
-        console.log(`Todo with id ${todoId} deleted successfully`);
         resolve();
       };
       request.onerror = reject;

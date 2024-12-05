@@ -19,7 +19,7 @@ export default createStore({
       localStorage.setItem("theme", theme);
     },
     setCurrentUser(state, user) {
-      state.currentUser = user;
+      state.currentUser = { username: user.username };
       sessionStorage.setItem("currentUser", JSON.stringify(user));
     },
     logout(state) {
@@ -48,7 +48,6 @@ export default createStore({
         if (!existingUser || existingUser.password !== user.password) {
           throw new Error("Invalid username or password");
         }
-        console.log(existingUser);
         commit("setCurrentUser", existingUser);
       } catch (error) {
         throw error;

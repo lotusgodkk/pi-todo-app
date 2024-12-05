@@ -8,6 +8,7 @@
     >
       <option value="en">English</option>
       <option value="es">Espanol</option>
+      <option value="hi">Hindi</option>
     </select>
   </div>
 </template>

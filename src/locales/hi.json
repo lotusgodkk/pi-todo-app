@@ -1,0 +1,36 @@
+{
+  "app": "टूडू ऐप",
+  "title": "टूडू सूची",
+  "todoList": {
+    "addTodo": "टूडू जोड़ें",
+    "todoDescription": "टूडू का विवरण दें",
+    "clearTodos": "सभी साफ करें",
+    "delete": "हटाएं",
+    "edit": "संपादित करें",
+    "editPriority": "प्राथमिकता संपादित करें",
+    "placeholder": "नया टूडू जोड़ें",
+    "toggleTodoModal": "मोडल चालू/बंद करें",
+    "loadNextPage": "अगला",
+    "loadPreviousPage": "पिछला",
+    "saveEdit": "सहेजें",
+    "cancelEdit": "रद्द करें",
+    "clearAll": "सभी साफ करें",
+    "priorities": {
+      "critical": "महत्वपूर्ण",
+      "moderate": "मध्यम",
+      "optional": "वैकल्पिक"
+    }
+  },
+  "userManagement": {
+    "enterUsername": "उपयोगकर्ता नाम दर्ज करें",
+    "logout": "लॉगआउट",
+    "language": "भाषा"
+  },
+  "themeToggle": {
+    "lightMode": "लाइट मोड",
+    "darkMode": "डार्क मोड",
+    "labelDark": "डार्क मोड पर स्विच करें",
+    "labelLight": "लाइट मोड पर स्विच करें"
+  },
+  "error": {}
+}

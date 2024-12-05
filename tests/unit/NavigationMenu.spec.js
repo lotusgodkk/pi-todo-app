@@ -26,12 +26,10 @@ describe("TodoApp.vue", () => {
   it("finds logo anchor element and checks if it exists", () => {
     const anchor = wrapper.find("a img");
     expect(anchor.exists()).toBe(true);
-    console.log(anchor.html());
   });
 
   it("finds logout button and checks if it exists", () => {
     const logout = wrapper.find("button.danger");
     expect(logout.exists()).toBe(true);
-    console.log(logout.html());
   });
 });

@@ -19,17 +19,23 @@
 </template>
 
 <script>
+//import { mapMutations } from "vuex";
+
 export default {
   data() {
     return {
-      currentTheme: "light",
+      currentTheme: this.$store.state.theme,
     };
   },
   methods: {
     toggleTheme() {
       this.currentTheme = this.currentTheme === "light" ? "dark" : "light";
       document.body.classList.toggle("dark", this.currentTheme === "dark");
+      this.$store.commit("setTheme", this.currentTheme);
     },
+  },
+  created() {
+    document.body.classList.toggle("dark", this.currentTheme === "dark");
   },
 };
 </script>
